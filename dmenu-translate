@@ -86,7 +86,7 @@ choose_next() {
 }
 
 save_file() (
-	tmp="$(mktemp --tmpdir 'dmenu-translate.XXXXXX')"
+	tmp="$(mktemp --tmpdir -t dmenu-translate)"
 	echo "$1" > "$tmp"
 	echo "$tmp"
 )
